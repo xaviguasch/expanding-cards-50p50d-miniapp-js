@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Muli:wght@400;700&display=swap');
 
 *,
 *::before,
@@ -9,11 +9,48 @@
 }
 
 body {
-  font-family: 'Roboto', sans-serif;
+  font-family: 'Muli', sans-serif;
+  color: white;
   display: flex;
-  flex-direction: column;
   justify-content: center;
   align-items: center;
   overflow: hidden;
   height: 100vh;
+}
+
+.container {
+  height: 80vh;
+  width: 60vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1em;
+}
+
+.panel {
+  height: 100%;
+  flex-basis: 100px;
+  cursor: pointer;
+  border-radius: 3em;
+
+  padding: 2em 1.5em;
+
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-end;
+
+  transition: flex-grow 1s ease-in;
+}
+
+.panel.active {
+  flex-grow: 5;
+}
+
+.panel h3 {
+  opacity: 0;
+  transition: opacity 1s ease-in;
+}
+
+.panel.active h3 {
+  opacity: 1;
 }
